@@ -1,0 +1,235 @@
+body
+{
+margin-left: 0px;
+margin-top: 0px;
+margin-right: 0px;
+margin-bottom: 0px;
+}
+
+form
+{
+margin-left: 0px;
+margin-top: 0px;
+margin-right: 0px;
+margin-bottom: 0px;
+}
+
+.ic-header-logo-content 
+{
+    background-image: url(images/img-header-bkg-logo.gif); 
+    background-repeat: repeat-x; 
+    height: 67px; 
+    /*width: 202px;*/
+    width: 270px;
+}
+
+.ic-header-toolbar-content {
+	/*background-image: url(images/img-header-bkg-toolbar.gif);*/
+	background-image: url(images/img-header-bkg-total.gif);
+	background-repeat: repeat-x;
+	padding-top: 6px;
+	height: 67px;
+	width: 190px;
+}
+
+.ic-header-center {height: 67px;}
+
+.ic-header-center-top {
+	background-image: url(images/img-header-bkg-center-top.gif);
+	/*background-repeat: repeat-y;*/
+	background-repeat:no-repeat;
+	/*background-position: 100%;*/
+	background-position:left;
+	height: 42px;
+	/*background-color: #E6E6E6;*/
+}
+.ic-header-default
+{
+    height: 67px;
+    background-image: url(images/img-header-bkg-total.gif);
+    background-repeat: repeat-x;
+}
+.ic-header-center-bottom {background-image: url(images/img-header-bkg-center-bottom.gif); /*background-repeat: repeat-x;*/ background-repeat:no-repeat; height: 25px; text-align: right; /*background-color: #E6E6E6;*/} 
+
+.ic-header-date {font-family:'Open Sans', Verdana, Arial, Helvetica, sans-serif; font-size: 9px; /*color: #333333;*/ color:#ffffff; text-align: right; /*padding-right: 20px;*/padding-right: 10px;}
+
+.ic-header-user {
+	font-family:'Open Sans', Verdana, Arial, Helvetica, sans-serif;
+	font-size: 9px;
+	/*background-image: url(images/img-user.gif);*/
+	background-image: url(images/img-user.png);
+	background-position:16px 0px;
+	background-repeat: no-repeat;
+	/*color: #333333;*/
+	color:#525251;
+	text-align: left;
+	padding-left: 40px;
+	height: 16px;
+}
+
+.ic-header-links
+{}
+	
+.ic-header-dropdownlist {
+	font-family:'Open Sans', Verdana, Arial, Helvetica, sans-serif;
+	font-size: 9px;
+	width: 180px;
+	color: #333333;
+	text-align: right;
+	padding-left: 5px;
+	height: 16px;
+}
+
+.ic-header-organization {
+	font-family:'Open Sans', Verdana, Arial, Helvetica, sans-serif;
+	font-size: 9px;
+	color: #333333;
+	text-align: right;
+	padding-left: 20px;
+	padding-right: 10px;
+	height: 16px;
+}
+
+	.sub-header .user {
+		margin-top: 31px; 
+	}
+	
+	.sub-header .logo a h1 {
+		margin-left: 5px;
+		float: left;
+	}
+
+	.sub-header .user .middle ul li.last {
+		font-size: 12.56px;
+		padding-bottom: 14px;
+	}
+	.salir {
+		background: none repeat-x scroll 10px 10px #F89420;
+		border: 1px solid #F89420;
+		color: #FFFFFF;
+		height: 40px;
+		margin-right: 7px;
+		margin-top: -7px;
+		padding-top: 10px;
+		width: 55px;
+	}
+ 
+	.salirLink {
+		color: #FFFFFF !important;
+		line-height: 22px !important;
+	}
+
+
+ .logos .logo_twitter_a{margin-left:15px; margin-left:10px\9; text-decoration:none;}
+ .logos .logo_facebook_a{margin-left:15px; margin-left:10px\9; text-decoration:none;}
+ .logos .logo_youtube_a{margin-left:15px; margin-left:10px\9; padding-bottom:-5px !important;text-decoration:none;}
+
+
+@media only screen and (max-width : 1400px) 
+{
+
+	/* 
+	   Tamaño del nombre
+	*/
+    	.name-big {
+		font-size: 16pt!important;
+
+		}
+
+}
+
+@media only screen and (max-width : 1280px) {
+
+	/* 
+	   Cuadro de nombre de usuario y demas elementros 
+	*/
+	
+	/*.sub-header .user {
+		margin-left: 180px;
+		margin-top: 45px;
+	}*/
+
+	/* 
+	   Tamaño del nombre
+	*/
+
+	.name-big {
+		font-size: 16pt!important;
+	}
+
+	/* 
+	   Removemos 10% al centralizado de la imagen
+	*/
+
+	.header-image .logo {
+		width: 45%;
+	}
+
+	/* 
+	   Tamaño del nombre producto
+	*/
+
+	.logo_personas {
+		font-size: 40px;
+	}
+
+	/* 
+	   Area de Redes Sociales
+	*/
+
+	.logos {
+		width: 100px;
+		width: 140px\9;
+		/*margin-top: 138px;
+		margin-right: 25px;*/
+		margin-right: 0px\9;
+	}
+}
+
+@media only screen and (max-width : 800px) {
+
+	/* 
+	   Cuadro de nombre de usuario y demas elementros 
+	*/
+	.sub-header .user {
+		margin-left: 180px;
+	}
+	
+
+	/* 
+	   Tamaño del nombre
+	*/
+
+	.name-big {
+		font-size: 16pt!important;
+	}
+
+	/* 
+	   Removemos 10% al centralizado de la imagen
+	*/
+
+	.header-image .logo {
+		width: 40%;
+	}
+
+	/* 
+	   Tamaño del nombre producto
+	*/
+
+	.logo_personas {
+		font-size: 40px;
+	}
+
+	/* 
+	   Area de Redes Sociales
+	*/
+
+	.logos {
+		width: 140px;
+		width: 140px\9;
+		margin-top: 138px;
+		margin-right: 25px;
+		margin-right: 0px\9;
+	}
+
+}

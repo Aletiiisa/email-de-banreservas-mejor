@@ -1,0 +1,17 @@
+.bl_right
+{
+    width:180px;
+    height:300px; 
+    height:310px\9;
+    background:#FFF; 
+    margin:0px; 
+    margin-left:3px; 
+    margin-top:10px; 
+}
+
+.bl_right ul{margin:0px; padding:0px; list-style:none;}
+
+.bl_right .publicidad{width:169px; float:right; margin-top:6px;margin-bottom:60px;}
+.bl_right .publicidad ul li{}
+.bl_right .publicidad ul li.image{width:169px; height:286px; background: url(images/publicidad_demo.jpg) top left no-repeat;}
+
