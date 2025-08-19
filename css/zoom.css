@@ -1,0 +1,5 @@
+/* 📱 Solo en móviles: aumenta un poco el zoom */
+body {
+  zoom: 1.2;  /* 🔎 más grande en móviles */
+  -webkit-text-size-adjust: none; /* evita que Safari/Chrome cambien las fuentes */
+}
