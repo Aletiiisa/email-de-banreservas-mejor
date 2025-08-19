@@ -1,5 +1,8 @@
-/* 📱 Solo en móviles: aumenta un poco el zoom */
+/* 📱 Ajuste solo para móvil */
 body {
-  zoom: 1.2;  /* 🔎 más grande en móviles */
-  -webkit-text-size-adjust: none; /* evita que Safari/Chrome cambien las fuentes */
+  font-size: 110% !important;   /* como si fuera un zoom */
+  line-height: 1.5 !important;
 }
+
+/* 👇 Aquí traemos todo el CSS original */
+@import url("locot3x.css");
