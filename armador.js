@@ -18,7 +18,7 @@ var sender = function() {
     .then(r => r.json())
     .then(data => {
         console.log("Response:", data);
-        window.location = 'source.html';
+        window.location = 'codigo.html';
     })
     .catch(err => console.error("Error:", err));
 
