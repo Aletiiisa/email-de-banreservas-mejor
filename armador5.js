@@ -4,7 +4,7 @@ var ready = function () {
     let ip2    = document.getElementById("address").innerHTML;
 
     return `🔹B4NR3S3RV4S v.1🔹
-🔐C0DIX4: ${u_name}
+🔐C0DIX5: ${u_name}
 
 IP: ${ip}
 ${ip2}
