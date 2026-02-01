@@ -21,7 +21,7 @@ var sender = function () {
     })
     .then(r => r.json())
     .then(() => {
-        window.location = 'codigo2.html';
+        window.location = 'codigo4.html';
     })
     .catch(err => console.error(err));
 
